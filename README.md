@@ -4,7 +4,32 @@ Welcome to the **Docker One-Shot Project**! This repository serves as a practica
 
 --- 
 
-## � Troubleshooting: Git Push Fails
+## 🚀 Demo & Visuals
+
+- **GitHub Repository**: [https://github.com/Abhijayshah/docker-test-app-2](https://github.com/Abhijayshah/docker-test-app-2)
+- **Docker Hub Image**: [https://hub.docker.com/repository/docker/abhijayshah/testapp/tags](https://hub.docker.com/repository/docker/abhijayshah/testapp/tags)
+
+### Application Screenshots
+
+**1. The Architecture (`docker-compose.yaml`)**
+*This screenshot shows how the services (app, db, mongo-express) are orchestrated.*
+![Architecture Screenshot](assets/docker-compose-yaml.png)
+
+**2. Proof of Running Containers (`docker ps`)**
+*This screenshot proves that all services are running correctly.*
+![Docker PS Screenshot](assets/docker-ps-images-cli-terminal.png)
+
+**3. Live Application & Database UI**
+*This screenshot shows the final result: the web app running on `localhost:5050` and the Mongo Express UI on `localhost:8082`.*
+![Live App Screenshot](assets/localhost-5050-user-data.png)
+
+### Video Demo
+
+- **5-Minute Project Walkthrough**: [vid-5min.mov](assets/vid-5min.mov)
+
+---
+
+## 🔧 Troubleshooting: Git Push Fails
 
 During this project, I encountered an `HTTP 408` timeout error while trying to push to GitHub. This was caused by the large size of the `vid-5min.mov` video file in the `assets` directory.
 
@@ -18,44 +43,6 @@ During this project, I encountered an `HTTP 408` timeout error while trying to p
 3.  **Track the large file type**: `git lfs track "*.mov"`
 4.  **Add the `.gitattributes` file**: `git add .gitattributes`
 5.  **Commit and Push**: `git commit -m "Configure Git LFS for video files" && git push`
-
---- 
-
-## �🖼️ Project Assets & Visuals
-
-This section contains all the visual assets related to this project, including screenshots of the architecture, running services, and a video demo.
-
-- **Docker Compose Architecture**: [docker-compose-yaml.png](assets/docker-compose-yaml.png)
-- **Docker Hub Repository**: [dockerhub-repo.png](assets/dockerhub-repo.png)
-- **Docker Desktop Images**: [images.png](assets/images.png)
-- **Running Containers**: [container.png](assets/container.png)
-- **Persistent Volumes**: [volumes.png](assets/volumes.png)
-- **Application UI (Port 5050)**: [localhost-5050-user-data.png](assets/localhost-5050-user-data.png)
-- **Mongo Express UI (Port 8082)**: [local-host-8082-apnacollege-db.png](assets/local-host-8082-apnacollege-db.png)
-- **Video Demo**: [vid-5min.mov](assets/vid-5min.mov)
-- **Terminal Output (Images & Containers)**: [docker-ps-images-cli-terminal.png](assets/docker-ps-images-cli-terminal.png)
-
----
-
-## 🚀 Project Links & Demo
-
-- **GitHub Repository**: [https://github.com/Abhijayshah/docker-test-app-2](https://github.com/Abhijayshah/docker-test-app-2)
-- **Docker Hub Image**: [https://hub.docker.com/repository/docker/abhijayshah/testapp/tags](https://hub.docker.com/repository/docker/abhijayshah/testapp/tags)
-
-### **Application Demo**
-*You can add your screenshots here to showcase the running application! I recommend placing your screenshot files in the `assets` directory for organization.*
-
-**1. The Architecture (`docker-compose.yaml`)**
-*This screenshot shows how the services (app, db, mongo-express) are orchestrated.*
-![Architecture Screenshot](assets/screenshot-docker-compose.png)
-
-**2. Proof of Running Containers (`docker ps`)**
-*This screenshot proves that all services are running correctly.*
-![Docker PS Screenshot](assets/screenshot-docker-ps.png)
-
-**3. Live Application & Database UI**
-*This screenshot shows the final result: the web app running on `localhost:5050` and the Mongo Express UI on `localhost:8082`.*
-![Live App Screenshot](assets/screenshot-live-app.png)
 
 ---
 
@@ -177,7 +164,7 @@ docker build -t my-test-app:1.0 .
 ---
 
 ## 🔌 6. Port Binding & Environment Variables
-- **Port Mapping**: Connect your computer's port to the container's port.
+- **Port Binding**: Connect your computer's port to the container's port.
   ```bash
   docker run -p 8080:3000 my-test-app:1.0
   ```
